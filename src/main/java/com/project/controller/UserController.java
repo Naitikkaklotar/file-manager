@@ -30,4 +30,10 @@ public class UserController {
 		return new ModelAndView("redirect:/admin/users");
 	}
 
+	// @GetMapping("admin/users")
+	// public ModelAndView users() {
+	// 	List<UserVO> userList = userService.findAll();
+	// 	return new ModelAndView("admin/viewUsers", "UserVO", new UserVO()).addObject("userList", userList);
+	// }
+
 }
