@@ -21,7 +21,7 @@ public class UserDAOImpl implements UserDAO {
 		session.saveOrUpdate(uservo);
 	}
 
-	public List findAll() {
+	public List<UserVO> findAll() {
 		Session session = sessionFactory.getCurrentSession();
 		Query q = session.createQuery("from UserVO where status = true");
 		return q.list();

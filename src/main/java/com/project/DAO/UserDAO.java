@@ -6,7 +6,7 @@ import com.project.model.UserVO;
 
 public interface UserDAO {
 
-	List findAll();
+	List<UserVO> findAll();
 
 	List<UserVO> findById(int id);
 
