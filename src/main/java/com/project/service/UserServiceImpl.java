@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
 	private UserDAO userDAO;
 
 	@Override
-	public List findAll() {
+	public List<UserVO> findAll() {
 		return this.userDAO.findAll();
 	}
 
@@ -27,7 +27,18 @@ public class UserServiceImpl implements UserService {
 		UserVO userVO = ls.get(0);
 
 		userVO.setStatus(false);
-		this.userDAO.save(userVO);
+		this.userDAO.saveUser(userVO);
+	}
+
+	@Override
+	public void saveUser(UserVO userVO) {
+		this.userDAO.saveUser(userVO);
+
+	}
+
+	@Override
+	public List edit(UserVO userVO) {
+		return this.userDAO.edit(userVO);
 	}
 
 }
