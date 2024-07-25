@@ -10,6 +10,9 @@ public interface UserDAO {
 
 	List<UserVO> findById(int id);
 
-	void save(UserVO userVO);
-
+	void saveUser(UserVO userVO);
+	
+	List edit(UserVO userVO);
+	
+	
 }

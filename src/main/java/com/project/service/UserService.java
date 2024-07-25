@@ -10,4 +10,10 @@ public interface UserService {
 
 	void deleteUser(int id);
 
+	void saveUser(UserVO userVO);
+	
+	List edit(UserVO userVO);
+
+
+
 }

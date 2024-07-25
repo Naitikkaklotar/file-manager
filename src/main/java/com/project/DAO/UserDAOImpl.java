@@ -16,9 +16,9 @@ public class UserDAOImpl implements UserDAO {
 	@Autowired 
 	private SessionFactory sessionFactory;
 	
-	public void save(UserVO uservo){
+	public void saveUser(UserVO userVO){
 		Session session = sessionFactory.getCurrentSession();
-		session.saveOrUpdate(uservo);
+		session.saveOrUpdate(userVO);
 	}
 
 	public List<UserVO> findAll() {
@@ -32,6 +32,18 @@ public class UserDAOImpl implements UserDAO {
 		Query q = session.createQuery("from UserVO where status = true and id = " + id);
 		return q.list();
 	}
+	
+	@Override
+	public List edit(UserVO userVO) {
+		Session session = sessionFactory.getCurrentSession();
+		Query q = session.createQuery("from UserVO where id=" + userVO.getId());
+
+		List ls = q.list();
+
+		return ls;
+	}
+
+
 	
 
 }
