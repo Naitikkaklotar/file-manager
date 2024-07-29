@@ -4,6 +4,8 @@ package com.project.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -22,7 +24,7 @@ public class UserController {
 
 	@GetMapping("admin/users")
 	public ModelAndView users() {
-		List<UserVO> userList = this.userService.findAll();
+		List<UserVO> userList = userService.findAll();
 		return new ModelAndView("admin/viewUsers", "UserVO", new UserVO()).addObject("userList", userList);
 	}
 
@@ -33,21 +35,16 @@ public class UserController {
 	}
 	
 	@PostMapping("admin/saveUser")
-	public ModelAndView saveUser(@ModelAttribute UserVO userVO) {
+	public ModelAndView saveUser(@ModelAttribute UserVO userVO){
 		this.userService.saveUser(userVO);
-		
-		return new ModelAndView("redirect:/admin/users","UserVO", new UserVO());
+		return new ModelAndView("redirect:/admin/users", "UserVO", new UserVO());
 	}
 	
-	@GetMapping("admin/editUser")
-	public ModelAndView Edit(@ModelAttribute UserVO userVO, @RequestParam int id){
-		
-		userVO.setId(id);
-		List editList = this.userService.edit(userVO);
-		
-		return new ModelAndView("admin/viewUsers","UserVO",editList.get(0));
+	@GetMapping("admin/findById")
+	public ResponseEntity findById(@RequestParam int id){
+		List<UserVO> editList = this.userService.findById(id);
+		return new ResponseEntity(editList.get(0),HttpStatus.OK);
 	}
-
 
 
 }

@@ -11,8 +11,5 @@ public interface UserDAO {
 	List<UserVO> findById(int id);
 
 	void saveUser(UserVO userVO);
-	
-	List edit(UserVO userVO);
-	
-	
+
 }

@@ -31,14 +31,14 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void saveUser(UserVO userVO) {
+	public void saveUser(UserVO userVO){
 		this.userDAO.saveUser(userVO);
-
 	}
+
 
 	@Override
-	public List edit(UserVO userVO) {
-		return this.userDAO.edit(userVO);
+	public List<UserVO> findById(int id) {
+		return this.userDAO.findById(id);
 	}
-
+	
 }
