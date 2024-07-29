@@ -68,6 +68,7 @@
 		<!-- Left Sidebar End -->
 
 
+
 		<!-- ============================================================== -->
 		<!-- Start right Content here -->
 		<!-- ============================================================== -->
@@ -90,7 +91,8 @@
 								<div class="page-title-right">
 									<button type="button"
 										class="btn btn-primary waves-effect waves-light"
-										data-bs-toggle="modal" data-bs-target="#myModal">Add</button>
+										data-bs-toggle="modal" data-bs-target="#myModal"
+										onclick="closeModal()">Add</button>
 								</div>
 								<!-- sample modal content -->
 								<!-- /.modal -->
@@ -114,11 +116,9 @@
 										<tr>
 											<th>#</th>
 											<th>Name</th>
-											<th>Gender</th>
 											<th>Mobile Number</th>
 											<th>Email</th>
 											<th>Username</th>
-											<th>Address</th>
 											<th>Action</th>
 										</tr>
 									</thead>
@@ -127,16 +127,19 @@
 										<c:forEach items="${userList}" var="i" varStatus="j">
 											<tr>
 												<td>${j.count}</td>
-												<td>${i.firstName}&nbsp;${i.lastName}</td>
-												<td>${i.gender}</td>
+												<td><a class="text-primary"
+													onclick="showInfo('${i.id}')" href="javascript:void(0)">
+														${i.firstName}&nbsp;${i.lastName} </a></td>
 												<td>${i.mobileNumber}</td>
 												<td>${i.email}</td>
 												<td>${i.username}</td>
-												<td>${i.address}</td>
-												<td><a class="btn-outline-primary"><i
-														class="fas fa-pencil-alt"></i></a> <a
-													class="delete-icon-color" href="deleteUser?id=${i.id}"><i
-														class="fas fa-trash-alt"></i></a></td>
+												<td><a class="btn-outline-primary"
+													href="javascript:void(0)"
+													onclick="handleClickOfEdit('${i.id}')"> <i
+														class="fas fa-pencil-alt"></i></a>&nbsp;&nbsp; <a
+													class="delete-icon-color" href="deleteUser?id=${i.id}">
+														<i class="fas fa-trash-alt"></i>
+												</a></td>
 											</tr>
 										</c:forEach>
 									</tbody>
@@ -169,8 +172,24 @@
 
 	<!-- /Right-bar -->
 
-	<!-- Right bar overlay-->
-	<div class="rightbar-overlay"></div>
+
+	<div id="myInfoModal" class="modal fade" tabindex="-1"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="myInfoModalLabel">Add User</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body" id="infoModalBody"></div>
+
+
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
 
 
 	<div id="myModal" class="modal fade" tabindex="-1"
@@ -180,10 +199,11 @@
 				<div class="modal-header">
 					<h5 class="modal-title" id="myModalLabel">Add User</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close" onclick='clearData()'></button>
+						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<f:form action="saveUser" method="post" modelAttribute="UserVO">
+					<f:form id="myForm" action="saveUser" method="post"
+						modelAttribute="UserVO">
 						<div class="row">
 							<div class="mb-3 col-6">
 								<label for="name" class="form-label">First Name</label>
@@ -212,7 +232,7 @@
 						</div>
 						<div class="mb-3">
 							<label for="mobile" class="form-label">Mobile Number</label>
-							<f:input type="text" class="form-control" id="mobileNumber"
+							<f:input type="text" class="form-control" id="mobile"
 								path="mobileNumber" name="mobileNumber" />
 						</div>
 						<div class="mb-3">
@@ -222,30 +242,41 @@
 						</div>
 						<div class="mb-3">
 							<label for="username" class="form-label">Username</label>
-							<f:input type="text" class="form-control" id="username" 
+							<f:input type="text" class="form-control" id="username"
 								path="username" name="username" />
 						</div>
 						<div class="mb-3">
 							<label for="address" class="form-label">Address</label>
-							<f:textarea class="form-control" id="address" rows="3"
-								path="address" name="address"></f:textarea>
+							<f:textarea class="form-control" id="address" path="address"
+								name="address" rows="3"></f:textarea>
 						</div>
 						<div class="modal-footer">
+
+							<f:hidden path="id" />
+
 							<button type="button" class="btn btn-secondary waves-effect"
-								data-bs-dismiss="modal" onclick='clearData()'>Close</button>
-							<button type="submit"
+								data-bs-dismiss="modal" onclick="closeModal()">Close</button>
+							<button type="submit" id="saveBtn"
 								class="btn btn-primary waves-effect waves-light">Save</button>
 						</div>
-
 					</f:form>
 				</div>
+
+
 			</div>
 			<!-- /.modal-content -->
 		</div>
 		<!-- /.modal-dialog -->
 	</div>
 
+
+
+
+
 	<!-- JAVASCRIPT -->
+	<script
+		src="<%=request.getContextPath()%>/adminResource/js/custom/users.js"></script>
+
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
 	<script
@@ -291,19 +322,8 @@
 		src="<%=request.getContextPath()%>/adminResource/js/datatables.init.js"></script>
 
 	<script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
-	<script>
-	function clearData(){
-		    // Select the modal and clear its data
-		    const modal = document.querySelector('.modal');
-		    
-		    modal.querySelectorAll('input, textarea, select','input[type="radio"]').forEach(element => {
-		    	console.log(element.checked)
-		        element.value = '';
-		    	element.checked =false;	
-		    	 
-		});
-	}
-	
-	</script>
+
+
+
 </body>
 </html>
