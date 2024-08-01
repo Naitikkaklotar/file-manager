@@ -35,6 +35,12 @@ public class UserVO {
 	@Column(name = "status")
 	private boolean status = true;
 
+	@ManyToOne
+	private StateVO stateVO;
+
+	@ManyToOne
+	private CityVO cityVO;
+
 	public int getId() {
 		return id;
 	}
@@ -105,6 +111,22 @@ public class UserVO {
 
 	public void setStatus(boolean status) {
 		this.status = status;
+	}
+
+	public StateVO getStateVO() {
+		return stateVO;
+	}
+
+	public void setStateVO(StateVO stateVO) {
+		this.stateVO = stateVO;
+	}
+
+	public CityVO getCityVO() {
+		return cityVO;
+	}
+
+	public void setCityVO(CityVO cityVO) {
+		this.cityVO = cityVO;
 	}
 
 }
