@@ -230,20 +230,42 @@
 								<label class="form-check-label" for="female">Female</label>
 							</div>
 						</div>
-						<div class="mb-3">
-							<label for="mobile" class="form-label">Mobile Number</label>
-							<f:input type="text" class="form-control" id="mobile"
-								path="mobileNumber" name="mobileNumber" />
-						</div>
-						<div class="mb-3">
-							<label for="email" class="form-label">Email address</label>
-							<f:input type="email" class="form-control" id="email"
-								path="email" name="email" />
+						<div class="row">
+							<div class="mb-3 col-6">
+								<label for="mobile" class="form-label">Mobile Number</label>
+								<f:input type="text" class="form-control" id="mobile"
+									path="mobileNumber" name="mobileNumber" />
+							</div>
+							<div class="mb-3 col-6">
+								<label for="email" class="form-label">Email address</label>
+								<f:input type="email" class="form-control" id="email"
+									path="email" name="email" />
+							</div>
 						</div>
 						<div class="mb-3">
 							<label for="username" class="form-label">Username</label>
 							<f:input type="text" class="form-control" id="username"
 								path="username" name="username" />
+						</div>
+						<div class="row">
+							<div class="mb-3 col-6">
+								<label for="state" class="form-label">State</label>
+								<f:select path="stateVO.id" class="form-control" id="stateName"
+									onchange="getCityByState()">
+									<option disabled="disabled" selected="selected">Select
+										State</option>
+									<c:forEach items="${stateList}" var="i">
+										<option value="${i.id}">${i.stateName}</option>
+									</c:forEach>
+								</f:select>
+							</div>
+							<div class="mb-3 col-6">
+								<label for="city" class="form-label">City</label>
+								<f:select path="cityVO.id" class="form-control" id="cityName">
+									<option disabled="disabled" selected="selected">Select
+										City</option>
+								</f:select>
+							</div>
 						</div>
 						<div class="mb-3">
 							<label for="address" class="form-label">Address</label>
@@ -261,12 +283,8 @@
 						</div>
 					</f:form>
 				</div>
-
-
 			</div>
-			<!-- /.modal-content -->
 		</div>
-		<!-- /.modal-dialog -->
 	</div>
 
 
