@@ -65,6 +65,9 @@ public class Basemethods {
 
 			// adding text to message
 			m.setText(message);
+			
+			 // __adding HTML content to message__
+            m.setContent(message, "text/html");
 
 			// send
 

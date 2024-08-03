@@ -284,6 +284,7 @@
 								class="btn btn-primary waves-effect waves-light">Save</button>
 						</div>
 					</f:form>
+					
 				</div>
 			</div>
 		</div>
