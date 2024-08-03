@@ -10,9 +10,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="City")
+@Table(name = "city_tbl")
 public class CityVO {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "Id")
@@ -30,7 +30,7 @@ public class CityVO {
 	@ManyToOne
 	@JoinColumn(name = "StateVO")
 	private StateVO stateVO;
-	
+
 	public StateVO getStateVO() {
 		return stateVO;
 	}
@@ -38,7 +38,7 @@ public class CityVO {
 	public void setStateVO(StateVO stateVO) {
 		this.stateVO = stateVO;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -71,9 +71,4 @@ public class CityVO {
 		this.status = status;
 	}
 
-	
-
-	
-
-	
 }

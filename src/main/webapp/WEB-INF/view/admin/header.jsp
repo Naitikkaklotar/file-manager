@@ -157,7 +157,7 @@
 					id="page-header-user-dropdown" data-bs-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false">
 					<img class="rounded-circle header-profile-user"
-						src="<%=request.getContextPath()%>/adminResource/images/avatar-1.jpg"
+						src="<%=request.getContextPath()%>/adminResource/images/avatar.png"
 						alt="Header Avatar" /> <i
 						class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
 				</button>
