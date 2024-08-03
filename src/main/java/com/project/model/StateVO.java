@@ -8,20 +8,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "States")
+@Table(name = "state_tbl")
 public class StateVO {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "Id")
 	private int id;
-	
+
 	@Column(name = "State")
 	private String stateName;
 
 	@Column(name = "Description")
 	private String description;
-	
+
 	@Column(name = "status")
 	private boolean status = true;
 
@@ -56,7 +56,5 @@ public class StateVO {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	
 
 }

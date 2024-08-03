@@ -1,3 +1,4 @@
+com\project\DAO\LoginDAOImpl.class
 com\project\DAO\UserDAO.class
 com\project\DAO\CityDAO.class
 com\project\model\UserVO.class
@@ -10,6 +11,7 @@ com\project\controller\UserController.class
 com\project\utils\Basemethods.class
 com\project\DAO\StateDAO.class
 com\project\Application.class
+com\project\service\LoginServiceImpl.class
 com\project\configuration\CustomizeAuthenticationSuccessHandler.class
 com\project\DAO\UserDAOImpl.class
 com\project\controller\CityController.class
@@ -19,6 +21,8 @@ com\project\model\CityVO.class
 com\project\model\StateVO.class
 com\project\controller\LoginController.class
 com\project\configuration\SecurityConfiguration.class
+com\project\DAO\LoginDAO.class
+com\project\service\LoginService.class
 com\project\HibernateConfig.class
 com\project\service\StateServiceImpl.class
 com\project\service\UserService.class

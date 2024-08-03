@@ -1,6 +1,8 @@
 function closeModal() {
 	document.getElementById("myModal").style.display = "none";
 	document.getElementById("myForm").reset(); // Reset the form fields
+
+	$('#username').removeAttr("disabled")
 	$('#myModalLabel').html('Add User');
 }
 
@@ -23,8 +25,14 @@ function handleClickOfEdit(id) {
 			$('#cityName').val(jsn.cityVO.id)
 			$('#address').val(jsn.address)
 			$('#id').val(jsn.id)
+			$('#loginId').val(jsn.loginVO.id)
+			
 			$('#' + jsn.gender).attr('checked', true)
 
+			
+			$('#username').attr("disabled","disabled")
+			$('#username').css("cursor","no-drop")
+			
 			getCityByState();
 			
 			$('#myModalLabel').html('Edit User');
@@ -120,9 +128,13 @@ function getCityByState(){
 			
 			const jsn = JSON.parse(htp.responseText);
 			
+			city.innerHTML = "";
+			
+			
 			for(let i = 0 ; i < jsn.length ; i++){
-
+				
 				const opn = document.createElement("option");
+				
 				opn.value = jsn[i].id;
 				opn.text = jsn[i].cityName;
 				

@@ -3,7 +3,7 @@ package com.project.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "UserInput")
+@Table(name = "user_tbl")
 public class UserVO {
 
 	@Id
@@ -40,6 +40,9 @@ public class UserVO {
 
 	@ManyToOne
 	private CityVO cityVO;
+
+	@ManyToOne
+	private LoginVO loginVO;
 
 	public int getId() {
 		return id;
@@ -127,6 +130,14 @@ public class UserVO {
 
 	public void setCityVO(CityVO cityVO) {
 		this.cityVO = cityVO;
+	}
+
+	public LoginVO getLoginVO() {
+		return loginVO;
+	}
+
+	public void setLoginVO(LoginVO loginVO) {
+		this.loginVO = loginVO;
 	}
 
 }

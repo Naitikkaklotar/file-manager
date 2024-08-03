@@ -250,7 +250,7 @@
 						<div class="row">
 							<div class="mb-3 col-6">
 								<label for="state" class="form-label">State</label>
-								<f:select path="stateVO.id" class="form-control" id="stateName"
+								<f:select path="stateVO.id" class="form-select" id="stateName"
 									onchange="getCityByState()">
 									<option disabled="disabled" selected="selected">Select
 										State</option>
@@ -261,7 +261,7 @@
 							</div>
 							<div class="mb-3 col-6">
 								<label for="city" class="form-label">City</label>
-								<f:select path="cityVO.id" class="form-control" id="cityName">
+								<f:select path="cityVO.id" class="form-select" id="cityName">
 									<option disabled="disabled" selected="selected">Select
 										City</option>
 								</f:select>
@@ -275,10 +275,12 @@
 						<div class="modal-footer">
 
 							<f:hidden path="id" />
+							
+							<f:hidden path="loginVO.id"  name="loginId" id="loginId"/>
 
 							<button type="button" class="btn btn-secondary waves-effect"
 								data-bs-dismiss="modal" onclick="closeModal()">Close</button>
-							<button type="submit" id="saveBtn"
+							<button type="submit" id="saveBtn" onclick="findUsername()"
 								class="btn btn-primary waves-effect waves-light">Save</button>
 						</div>
 					</f:form>
