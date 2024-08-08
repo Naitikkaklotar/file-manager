@@ -202,7 +202,7 @@
 						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<f:form id="myForm" action="saveUser" method="post"
+					<f:form id="myFormU" action="saveUser" method="post"
 						modelAttribute="UserVO">
 						<div class="row">
 							<div class="mb-3 col-6">
@@ -275,8 +275,8 @@
 						<div class="modal-footer">
 
 							<f:hidden path="id" />
-							
-							<f:hidden path="loginVO.id"  name="loginId" id="loginId"/>
+
+							<f:hidden path="loginVO.id" name="loginId" id="loginId" />
 
 							<button type="button" class="btn btn-secondary waves-effect"
 								data-bs-dismiss="modal" onclick="closeModal()">Close</button>
@@ -284,7 +284,7 @@
 								class="btn btn-primary waves-effect waves-light">Save</button>
 						</div>
 					</f:form>
-					
+
 				</div>
 			</div>
 		</div>
@@ -343,7 +343,14 @@
 		src="<%=request.getContextPath()%>/adminResource/js/datatables.init.js"></script>
 
 	<script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
+	
+	<script src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+	
+	<script src="<%=request.getContextPath()%>/adminResource/js/custom/validation.js"></script>
 
+
+	
 
 
 </body>

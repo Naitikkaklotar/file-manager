@@ -70,39 +70,57 @@ public class UserServiceImpl implements UserService {
 			
 			String subject = "Welcome to I-Repo";
 			StringBuilder sb = new StringBuilder();
-	        sb.append("<html>")
-	          .append("<head>")
-	          .append("<style>")
-	          .append("body { font-family: Arial, sans-serif; }")
-	          .append(".container { width: 80%; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9; }")
-	          .append(".header { text-align: center; padding: 10px 0; }")
-	          .append(".content { margin: 20px 0; }")
-	          .append(".footer { text-align: center; font-size: 12px; color: #777; margin-top: 20px; }")
-	          .append("</style>")
-	          .append("</head>")
-	          .append("<body>")
-	          .append("<div class='container'>")
-	          .append("<div class='header'>")
-	          .append("<h1>Welcome to I-Repo</h1>")
-	          .append("</div>")
-	          .append("<div class='content'>")
-	          .append(String.format("<p>Hello %s,</p>", userVO.getUsername()))
-	          .append("<p>You have been successfully registered in I-Repo.</p>")
-	          .append(String.format("<p><strong>Username:</strong> %s</p>", userVO.getUsername()))
-	          .append(String.format("<p><strong>Password:</strong> %s</p>", password))
-	          .append("</div>")
-	          .append("<div class='footer'>")
-	          .append("<p>&copy; 2024 I-Repo. All rights reserved.</p>")
-	          .append("</div>")
-	          .append("</div>")
-	          .append("</body>")
-	          .append("</html>");
 
-	        String message = sb.toString();
-			
-			
-			
-			
+			sb.append("<!DOCTYPE html>")
+			  .append("<html lang=\"en\">")
+			  .append("<head>")
+			  .append("<meta charset=\"UTF-8\">")
+			  .append("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">")
+			  .append("<title>Welcome to I-Repo</title>")
+			  .append("<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>")
+			  .append("<style>")
+			  .append("body { font-family: 'Roboto', sans-serif; background-color: #f2f6fc; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }")
+			  .append(".email-container { width: 100%; max-width: 600px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); overflow: hidden; }")
+			  .append(".email-header { background-color: #556ee6; text-align: center; padding: 20px; color: #ffffff; }")
+			  .append(".email-header img { max-width: 100px; margin-bottom: 10px; }")
+			  .append(".email-body { padding: 30px 20px; background-color: #cce4f6; text-align: left; }")
+			  .append(".email-body h1 { font-size: 24px; color: #333333; margin-top: 0; }")
+			  .append(".email-body p { font-size: 16px; color: #666666; line-height: 1.5; }")
+			  .append(".login-info { margin: 20px 0; padding: 20px; background-color: #ffffff; border: 1px solid #dddddd; border-radius: 8px; }")
+			  .append(".login-info p { margin: 0; padding: 10px 0; font-size: 14px; color: #333333; }")
+			  .append(".btn { display: inline-block; padding: 10px 20px; margin-top: 20px; background-color: #556ee6; color: #ffffff; text-decoration: none; border-radius: 5px; }")
+			  .append(".btn:hover { background-color: #4056c6; }")
+			  .append(".email-footer { background-color: #556ee6; text-align: center; padding: 20px; font-size: 12px; color: #ffffff; }")
+			  .append(".email-footer a { color: #ffffff; text-decoration: none; }")
+			  .append(".email-footer p { margin: 0; }")
+			  .append("</style>")
+			  .append("</head>")
+			  .append("<body>")
+			  .append("<div class='email-container'>")
+			  .append("<div class='email-header'>")
+			  .append("<img src='https://example.com/logo.png' alt='I-Repo Logo'>")
+			  .append("<h1>Welcome to I-Repo!</h1>")
+			  .append("</div>")
+			  .append("<div class='email-body'>")
+			  .append(String.format("<p>Hi %s,</p>", userVO.getUsername()))
+			  .append("<p>Thank you for signing up! We're excited to have you on board. You can start using I-Repo to manage your repositories and collaborate with your team today.</p>")
+			  .append("<div class='login-info'>")
+			  .append(String.format("<p><strong>Username:</strong> %s</p>", userVO.getUsername()))
+			  .append(String.format("<p><strong>Password:</strong> %s</p>", password))
+			  .append("</div>")
+			  .append("<a href='https://example.com/login' class='btn'>Log In Now</a>")
+			  .append("<p>Thanks for choosing I-Repo.<br>- The I-Repo Team</p>")
+			  .append("</div>")
+			  .append("<div class='email-footer'>")
+			  .append("<p>Questions? <a href='mailto:support@irepo.com'>Contact Support</a></p>")
+			  .append("<p>I-Repo, LLC - 2527 Broad Ave, Memphis, TN 38112</p>")
+			  .append("</div>")
+			  .append("</div>")
+			  .append("</body>")
+			  .append("</html>");
+
+			String message = sb.toString();
+
 			
 			
 			/*String message = String.format("Hello %s,\n\nYou have been successfully registered in I-Repo.\n\nUsername: %s\nPassword: %s\n",
