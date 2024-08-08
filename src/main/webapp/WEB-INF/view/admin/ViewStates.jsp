@@ -206,7 +206,7 @@
 				</div>
 				<div class="modal-body">
 					<f:form id="myForm" action="saveState" method="post"
-						modelAttribute="StateVO">
+						modelAttribute="StateVO"  >
 
 
 						<div class="mb-3">
@@ -239,7 +239,20 @@
 		</div>
 		<!-- /.modal-dialog -->
 	</div>
+	
+	<!-- <script>
+        function validateForm() {
+            var stateName = document.getElementById("stateName").value.trim();
+            if (stateName === "") {
+                alert("State Name cannot be empty.");
+                return false; // Prevent form submission
+            }
+            // Additional validation checks can be added here
 
+            return true; // Allow form submission
+        }
+    </script>
+ -->
 
 
 
@@ -293,7 +306,10 @@
 
 	<script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
 
-
+<!-- validation -->
+<script src="<%=request.getContextPath()%>/adminResource/js/custom/validation.js"></script>
+<%-- <script src="<%=request.getContextPath()%>/adminResource/js/jquery.validate.min.js"></script> --%>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 
 
 

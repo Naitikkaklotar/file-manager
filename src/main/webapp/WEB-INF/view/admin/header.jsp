@@ -14,11 +14,11 @@
 				</span>
 				</a> <a href="index" class="logo logo-light"> <span class="logo-sm">
 						<img
-						src="<%=request.getContextPath()%>/adminResource/images/logo-light.svg"
+						src="<%=request.getContextPath()%>/adminResource/images/i-repo_logo.png"
 						alt="" height="22" />
 				</span> <span class="logo-lg"> <img
-						src="<%=request.getContextPath()%>/adminResource/images/logo-light.png"
-						alt="" height="19" />
+						src="<%=request.getContextPath()%>/adminResource/images/i-repo_logo.png"
+						alt="" height="120" />
 				</span>
 				</a>
 			</div>
