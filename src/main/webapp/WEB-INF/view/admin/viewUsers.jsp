@@ -202,7 +202,7 @@
 						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<f:form id="myFormU" action="saveUser" method="post"
+					<f:form id="myForm" action="saveUser" method="post"
 						modelAttribute="UserVO">
 						<div class="row">
 							<div class="mb-3 col-6">
@@ -345,9 +345,8 @@
 	<script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
 	
 	<script src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-	
-	<script src="<%=request.getContextPath()%>/adminResource/js/custom/validation.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResource/js/jquery.validate.min.js"></script>	
+	<script src="<%=request.getContextPath()%>/adminResource/js/custom/uservalidation.js"></script>
 
 
 	
