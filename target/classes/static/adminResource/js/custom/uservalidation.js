@@ -1,40 +1,3 @@
-/*$(document).ready(function() {
-    $('#myForm').submit(function(e) {
-        var stateName = $('#stateName').val().trim();
-
-        if (stateName === "") {
-            alert("State Name cannot be empty.");
-            e.preventDefault(); // Prevent form submission
-        }
-
-        // Additional validation checks can be added here
-    });
-});
-*/
-
-// validation.js
-
-$(document).ready(function() {
-    $("#myForm").validate({
-        rules: {
-            stateName: {
-                required: true
-            },
-            description: {
-                required: true
-            }
-        },
-        messages: {
-            stateName: {
-                required: "Please enter the state name"
-            },
-            description: {
-                required: "Please enter the description"
-            }
-        }
-    });
-});
-
 /*userjsp valid*/
 $(document).ready(function() {
     $.validator.addMethod("validMobile", function(value, element) {
@@ -42,7 +5,7 @@ $(document).ready(function() {
         return this.optional(element) || /^(\+\d{1,3}[- ]?)?\d{10,15}$/.test(value);
     }, "Please enter a valid phone number.");
 
-    $("#myFormU").validate({
+    $("#myForm").validate({
         rules: {
             firstName: {
                 required: true
@@ -63,10 +26,10 @@ $(document).ready(function() {
             username: {
                 required: true
             },
-            stateName: {
+            "stateVO.id": {
                 required: true
             },
-            cityName: {
+            "cityVO.id": {
                 required: true
             },
             address: {
@@ -101,12 +64,27 @@ $(document).ready(function() {
                 required: "Please enter your address"
             }
         },
-        errorClass: "error",
+        errorElement: "div",
+        errorClass: "invalid-feedback",
         highlight: function(element, errorClass, validClass) {
-            $(element).addClass(errorClass).removeClass(validClass);
+            $(element).addClass("is-invalid").removeClass("is-valid");
         },
         unhighlight: function(element, errorClass, validClass) {
-            $(element).removeClass(errorClass).addClass(validClass);
+            $(element).removeClass("is-invalid").addClass("is-valid");
+        },
+        errorPlacement: function(error, element) {
+            // Add the `invalid-feedback` class to the error element
+            error.addClass("invalid-feedback");
+
+            if (element.prop("type") === "checkbox" || element.prop("type") === "radio") {
+                error.insertAfter(element.next("label"));
+            } else {
+                error.insertAfter(element);
+            }
         }
     });
 });
+
+
+
+

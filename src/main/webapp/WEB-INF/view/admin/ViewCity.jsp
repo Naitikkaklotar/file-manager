@@ -301,6 +301,15 @@
 		src="<%=request.getContextPath()%>/adminResource/js/datatables.init.js"></script>
 
 	<script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
+	
+<!-- validdd-->	<script
+
+		src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResource/js/jquery.validate.min.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResource/js/custom/CityValidation.js"></script>
+
 
 
 
