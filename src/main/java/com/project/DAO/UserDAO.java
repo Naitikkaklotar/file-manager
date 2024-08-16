@@ -12,4 +12,6 @@ public interface UserDAO {
 
 	void saveUser(UserVO userVO);
 
+	List<UserVO> checkUsername(String username);
+
 }

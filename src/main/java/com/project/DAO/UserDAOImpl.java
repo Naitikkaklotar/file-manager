@@ -50,6 +50,18 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return ls;
 	}
-	
+
+	@Override
+	public List<UserVO> checkUsername(String username) {
+		List<UserVO> ls = new ArrayList<UserVO>();
+		try {
+			Session session = sessionFactory.getCurrentSession();
+			Query q = session.createQuery("from UserVO where username = '" + username + "'  ");
+			ls = q.list();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+		}
+		return ls;
+	}
 
 }

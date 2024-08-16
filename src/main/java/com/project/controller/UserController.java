@@ -52,5 +52,11 @@ public class UserController {
 		List<UserVO> editList = this.userService.findById(id);
 		return new ResponseEntity(editList.get(0), HttpStatus.OK);
 	}
+	@GetMapping("admin/checkUsername")
+	public ResponseEntity checkUsername(@RequestParam String username) {
+		boolean isUsernameExist = this.userService.checkUsername(username);
+		return new ResponseEntity(isUsernameExist, HttpStatus.OK);
+	}
+	
 
 }

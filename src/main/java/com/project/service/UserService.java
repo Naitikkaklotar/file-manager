@@ -14,4 +14,6 @@ public interface UserService {
 
 	List<UserVO> findById(int id);
 
+	boolean checkUsername(String username);
+
 }
