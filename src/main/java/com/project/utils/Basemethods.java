@@ -10,13 +10,17 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan
 public class Basemethods {
 
-	private static String from = "noreply.irepo@gmail.com";
-	private static String password = "jvepiidteiaawgfb";
+	@Value("${mail.username}")
+	private static String from;
+
+	@Value("${mail.password}")
+	private static String password;
 
 	public static String getUsername() {
 		return "";
@@ -28,7 +32,6 @@ public class Basemethods {
 
 		// get the system properties
 		Properties properties = System.getProperties();
-		System.out.println("PROPERTIES " + properties);
 
 		// setting important information to properties object
 
@@ -65,16 +68,12 @@ public class Basemethods {
 
 			// adding text to message
 			m.setText(message);
-			
-			 // __adding HTML content to message__
-            m.setContent(message, "text/html");
 
-			// send
+			// __adding HTML content to message__
+			m.setContent(message, "text/html");
 
 			// Step 3 : send the message using Transport class
 			Transport.send(m);
-
-			System.out.println("Sent success...................");
 
 		} catch (Exception e) {
 			e.printStackTrace();

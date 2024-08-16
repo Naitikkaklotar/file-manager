@@ -1,6 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,21 +17,21 @@
 				to I-Repo!</h1>
 		</div>
 		<div style="padding: 20px; text-align: left;">
-			<p>Hi dfghjkl;',</p>
+			<p>Hi [USERNAME]</p>
 			<p>You can start sending invoices, bidding on projects, and
 				collaborating with your team today.</p>
 			<div style="margin: 20px 0; text-align: left;">
 				<p>
 					<strong style="display: inline-block; width: 150px;">Username:</strong>
-					dfghjkl;'
+					[USERNAME]
 				</p>
 				<p>
 					<strong style="display: inline-block; width: 150px;">PassWord:</strong>
-					Password
+					[PASSWORD]
 				</p>
 			</div>
 			<div style="margin: 20px 0;">
-				<a href="https://example.com/login"
+				<a href="[LOGIN_URL]"
 					style="background-color: #A9A9A9; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Log
 					In Now</a>
 			</div>

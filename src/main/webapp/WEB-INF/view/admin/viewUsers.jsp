@@ -194,7 +194,7 @@
 
 	<div id="myModal" class="modal fade" tabindex="-1"
 		aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="myModalLabel">Add User</h5>
@@ -205,47 +205,42 @@
 					<f:form id="myForm" action="saveUser" method="post"
 						modelAttribute="UserVO">
 						<div class="row">
-							<div class="mb-3 col-6">
+							<div class="mb-3 col-4">
 								<label for="name" class="form-label">First Name</label>
 								<f:input class="form-control" id="firstName" path="firstName"
 									name="firstName" />
 							</div>
-							<div class="mb-3 col-6">
+							<div class="mb-3 col-4">
 								<label for="name" class="form-label">Last Name</label>
 								<f:input class="form-control" id="lastName" path="lastName"
 									name="lastName" />
 							</div>
-						</div>
 
-						<div class="mb-3">
-							<label class="form-label">Gender</label><br>
-							<div class="form-check form-check-inline">
-								<f:radiobutton path="gender" value="male"
-									cssClass="form-check-input" id="male" />
-								<label class="form-check-label" for="male">Male</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<f:radiobutton path="gender" value="female"
-									cssClass="form-check-input" id="female" />
-								<label class="form-check-label" for="female">Female</label>
+							<div class="mb-3 col-4">
+								<label class="form-label">Gender</label><br>
+								<f:select path="gender" class="form-select" id="gender">
+									<option value="male">Male</option>
+									<option value="female">Female</option>
+								</f:select>
 							</div>
 						</div>
 						<div class="row">
-							<div class="mb-3 col-6">
+							<div class="mb-3 col-4">
 								<label for="mobile" class="form-label">Mobile Number</label>
 								<f:input type="text" class="form-control" id="mobile"
 									path="mobileNumber" name="mobileNumber" />
 							</div>
-							<div class="mb-3 col-6">
+							<div class="mb-3 col-4">
 								<label for="email" class="form-label">Email address</label>
 								<f:input type="email" class="form-control" id="email"
 									path="email" name="email" />
 							</div>
-						</div>
-						<div class="mb-3">
-							<label for="username" class="form-label">Username</label>
-							<f:input type="text" class="form-control" id="username"
-								path="username" name="username" />
+
+							<div class="mb-3 col-4">
+								<label for="username" class="form-label">Username</label>
+								<f:input type="text" class="form-control" id="username"
+									path="username" name="username" />
+							</div>
 						</div>
 						<div class="row">
 							<div class="mb-3 col-6">
@@ -280,7 +275,7 @@
 
 							<button type="button" class="btn btn-secondary waves-effect"
 								data-bs-dismiss="modal" onclick="closeModal()">Close</button>
-							<button type="submit" id="saveBtn" onclick="findUsername()"
+							<button type="submit" id="saveBtn"
 								class="btn btn-primary waves-effect waves-light">Save</button>
 						</div>
 					</f:form>
@@ -294,10 +289,10 @@
 
 
 
-	<!-- JAVASCRIPT -->
+	<script
+		src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/custom/users.js"></script>
-
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
 	<script
@@ -308,13 +303,10 @@
 		src="<%=request.getContextPath()%>/adminResource/js/simplebar.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/waves.min.js"></script>
-
-	<!-- Required datatable js -->
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/jquery.dataTables.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/dataTables.bootstrap4.min.js"></script>
-	<!-- Buttons examples -->
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/dataTables.buttons.min.js"></script>
 	<script
@@ -331,25 +323,15 @@
 		src="<%=request.getContextPath()%>/adminResource/js/buttons.print.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/buttons.colVis.min.js"></script>
-
-	<!-- Responsive examples -->
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/dataTables.responsive.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/responsive.bootstrap4.min.js"></script>
-
-	<!-- Datatable init js -->
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/datatables.init.js"></script>
-
 	<script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
-	
-	<script src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResource/js/jquery.validate.min.js"></script>	
-	<script src="<%=request.getContextPath()%>/adminResource/js/custom/uservalidation.js"></script>
-
-
-	
+	<script
+		src="<%=request.getContextPath()%>/adminResource/js/jquery.validate.min.js"></script>
 
 
 </body>
