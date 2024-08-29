@@ -258,6 +258,38 @@ function getCityByState(){
 	htp.send();
 }
 
+function changeStatus(id,status){
+
+	
+	var htp = new XMLHttpRequest();
+
+	htp.onreadystatechange = function() {
+		
+		if (htp.readyState === 4) {
+			
+			if(htp.responseText){
+				
+				
+				const s = status === 'active' ? 'Blocked' : 'Active';
+				$(`#flexSwitchCheck${id}`).attr('title',s);
+				
+				
+				// TODO : Toasty	
+				showErrorToast('test');
+			}else{
+				// TODO : Toasty
+				showErrorToast('testy');
+			}
+			$(`#flexSwitchCheck${id}`).attr('data-bs-placement','right');
+			$(`#flexSwitchCheck${id}`).attr('data-bs-toggle','tooltip');
+		}
+	}
+
+	htp.open("get", "changeStatus?id=" + id, true);
+	htp.send();
+	
+}
+
 
 
 

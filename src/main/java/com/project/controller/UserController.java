@@ -57,6 +57,13 @@ public class UserController {
 		boolean isUsernameExist = this.userService.checkUsername(username);
 		return new ResponseEntity(isUsernameExist, HttpStatus.OK);
 	}
+	@GetMapping("admin/changeStatus")
+	public ResponseEntity changeStatus(@RequestParam Integer id) {
+		boolean isStatusChanged = this.userService.changeStatus(id);
+		return new ResponseEntity(isStatusChanged, HttpStatus.OK);
+	}
+	
+	
 	
 
 }

@@ -119,4 +119,24 @@ public class UserServiceImpl implements UserService {
 		return userList.size() > 0;
 	}
 
+	@Override
+	public boolean changeStatus(Integer id) {
+
+		List<UserVO> ls = this.findById(id);
+
+		if (ls == null || ls.size() == 0) {
+			return false;
+		}
+
+		UserVO userVO = ls.get(0);
+		LoginVO loginVO = userVO.getLoginVO();
+
+		String status = loginVO.getEnabled();
+		loginVO.setEnabled(status.equals("1") ? "0" : "1");
+
+		this.loginDAO.save(loginVO);
+
+		return true;
+	}
+
 }
