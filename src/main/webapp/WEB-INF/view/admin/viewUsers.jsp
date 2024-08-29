@@ -119,6 +119,7 @@
 											<th>Mobile Number</th>
 											<th>Email</th>
 											<th>Username</th>
+											<th>Status</th>
 											<th>Action</th>
 										</tr>
 									</thead>
@@ -133,6 +134,21 @@
 												<td>${i.mobileNumber}</td>
 												<td>${i.email}</td>
 												<td>${i.username}</td>
+												<td><c:if test="${i.loginVO.enabled == '1' }">
+														<div class="form-check form-switch">
+															<input class="form-check-input" type="checkbox"
+																onchange="changeStatus(${i.id},'active')" role="switch"
+																id="flexSwitchCheck${i.id}" checked="checked"
+																title="Active">
+														</div>
+
+													</c:if> <c:if test="${i.loginVO.enabled == '0' }">
+														<div class="form-check form-switch">
+															<input class="form-check-input" type="checkbox"
+																onchange="changeStatus(${i.id},'blocked')" role="switch"
+																id="flexSwitchCheck${i.id}" title="Blocked">
+														</div>
+													</c:if></td>
 												<td><a class="btn-outline-primary"
 													href="javascript:void(0)"
 													onclick="handleClickOfEdit('${i.id}')"> <i
@@ -286,15 +302,14 @@
 	</div>
 
 
-
-
-
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResource/js/jquery.toast.min.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResource/js/custom/toaster.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/custom/users.js"></script>
-	<script
-		src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/bootstrap.bundle.min.js"></script>
 	<script
@@ -332,7 +347,6 @@
 	<script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/jquery.validate.min.js"></script>
-
 
 </body>
 </html>
