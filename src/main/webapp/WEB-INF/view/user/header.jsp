@@ -4,16 +4,16 @@
 					<!-- LOGO -->
 					<div class="navbar-brand-box">
 						<a href="index.html" class="logo logo-dark"> <span
-							class="logo-sm"> <img src="adminResource/images/logo.svg"
+							class="logo-sm"> <img src="<%=request.getContextPath()%>/adminResource/images/logo.svg"
 								alt="" height="22" />
 						</span> <span class="logo-lg"> <img
-								src="adminResource/images/logo-dark.png" alt="" height="17" />
+								src="<%=request.getContextPath()%>/adminResource/images/logo-dark.png" alt="" height="17" />
 						</span>
 						</a> <a href="index.html" class="logo logo-light"> <span
 							class="logo-sm"> <img
-								src="adminResource/images/logo-light.svg" alt="" height="22" />
+								src="<%=request.getContextPath()%>/adminResource/images/logo-light.svg" alt="" height="22" />
 						</span> <span class="logo-lg"> <img
-								src="adminResource/images/logo-light.png" alt="" height="19" />
+								src="<%=request.getContextPath()%>/adminResource/images/logo-light.png" alt="" height="19" />
 						</span>
 						</a>
 					</div>
@@ -130,7 +130,7 @@
 
 										<div class="col-sm-5">
 											<div>
-												<img src="adminResource/images/megamenu-img.png" alt=""
+												<img src="<%=request.getContextPath()%>/adminResource/images/megamenu-img.png" alt=""
 													class="img-fluid mx-auto d-block" />
 											</div>
 										</div>
@@ -171,41 +171,41 @@
 						<button type="button" class="btn header-item waves-effect"
 							data-bs-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">
-							<img id="header-lang-img" src="adminResource/images/us.jpg"
+							<img id="header-lang-img" src="<%=request.getContextPath()%>/adminResource/images/us.jpg"
 								alt="Header Language" height="16" />
 						</button>
 						<div class="dropdown-menu dropdown-menu-end">
 							<!-- item-->
 							<a href="javascript:void(0);"
 								class="dropdown-item notify-item language" data-lang="en"> <img
-								src="adminResource/images/us.jpg" alt="user-image" class="me-1"
+								src="<%=request.getContextPath()%>/adminResource/images/us.jpg" alt="user-image" class="me-1"
 								height="12" /> <span class="align-middle">English</span>
 							</a>
 							<!-- item-->
 							<a href="javascript:void(0);"
 								class="dropdown-item notify-item language" data-lang="sp"> <img
-								src="adminResource/images/spain.jpg" alt="user-image"
+								src="<%=request.getContextPath()%>/adminResource/images/spain.jpg" alt="user-image"
 								class="me-1" height="12" /> <span class="align-middle">Spanish</span>
 							</a>
 
 							<!-- item-->
 							<a href="javascript:void(0);"
 								class="dropdown-item notify-item language" data-lang="gr"> <img
-								src="adminResource/images/germany.jpg" alt="user-image"
+								src="<%=request.getContextPath()%>/adminResource/images/germany.jpg" alt="user-image"
 								class="me-1" height="12" /> <span class="align-middle">German</span>
 							</a>
 
 							<!-- item-->
 							<a href="javascript:void(0);"
 								class="dropdown-item notify-item language" data-lang="it"> <img
-								src="adminResource/images/italy.jpg" alt="user-image"
+								src="<%=request.getContextPath()%>/adminResource/images/italy.jpg" alt="user-image"
 								class="me-1" height="12" /> <span class="align-middle">Italian</span>
 							</a>
 
 							<!-- item-->
 							<a href="javascript:void(0);"
 								class="dropdown-item notify-item language" data-lang="ru"> <img
-								src="adminResource/images/russia.jpg" alt="user-image"
+								src="<%=request.getContextPath()%>/adminResource/images/russia.jpg" alt="user-image"
 								class="me-1" height="12" /> <span class="align-middle">Russian</span>
 							</a>
 						</div>
@@ -223,18 +223,18 @@
 								<div class="row g-0">
 									<div class="col">
 										<a class="dropdown-icon-item" href="#"> <img
-											src="adminResource/images/github.png" alt="Github" /> <span>GitHub</span>
+											src="<%=request.getContextPath()%>/adminResource/images/github.png" alt="Github" /> <span>GitHub</span>
 										</a>
 									</div>
 									<div class="col">
 										<a class="dropdown-icon-item" href="#"> <img
-											src="adminResource/images/bitbucket.png" alt="bitbucket" />
+											src="<%=request.getContextPath()%>/adminResource/images/bitbucket.png" alt="bitbucket" />
 											<span>Bitbucket</span>
 										</a>
 									</div>
 									<div class="col">
 										<a class="dropdown-icon-item" href="#"> <img
-											src="adminResource/images/dribbble.png" alt="dribbble" /> <span>Dribbble</span>
+											src="<%=request.getContextPath()%>/adminResource/images/dribbble.png" alt="dribbble" /> <span>Dribbble</span>
 										</a>
 									</div>
 								</div>
@@ -242,18 +242,18 @@
 								<div class="row g-0">
 									<div class="col">
 										<a class="dropdown-icon-item" href="#"> <img
-											src="adminResource/images/dropbox.png" alt="dropbox" /> <span>Dropbox</span>
+											src="<%=request.getContextPath()%>/adminResource/images/dropbox.png" alt="dropbox" /> <span>Dropbox</span>
 										</a>
 									</div>
 									<div class="col">
 										<a class="dropdown-icon-item" href="#"> <img
-											src="adminResource/images/mail_chimp.png" alt="mail_chimp" />
+											src="<%=request.getContextPath()%>/adminResource/images/mail_chimp.png" alt="mail_chimp" />
 											<span>Mail Chimp</span>
 										</a>
 									</div>
 									<div class="col">
 										<a class="dropdown-icon-item" href="#"> <img
-											src="adminResource/images/slack.png" alt="slack" /> <span>Slack</span>
+											src="<%=request.getContextPath()%>/adminResource/images/slack.png" alt="slack" /> <span>Slack</span>
 										</a>
 									</div>
 								</div>
@@ -315,7 +315,7 @@
 								</a> <a href="javascript: void(0);"
 									class="text-reset notification-item">
 									<div class="d-flex">
-										<img src="adminResource/images/avatar-3.jpg"
+										<img src="<%=request.getContextPath()%>/adminResource/images/avatar-3.jpg"
 											class="me-3 rounded-circle avatar-xs" alt="user-pic" />
 										<div class="flex-grow-1">
 											<h6 class="mb-1">James Lemire</h6>
@@ -353,7 +353,7 @@
 								</a> <a href="javascript: void(0);"
 									class="text-reset notification-item">
 									<div class="d-flex">
-										<img src="adminResource/images/avatar-4.jpg"
+										<img src="<%=request.getContextPath()%>/adminResource/images/avatar-4.jpg"
 											class="me-3 rounded-circle avatar-xs" alt="user-pic" />
 										<div class="flex-grow-1">
 											<h6 class="mb-1">Salena Layfield</h6>
@@ -384,7 +384,7 @@
 							id="page-header-user-dropdown" data-bs-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">
 							<img class="rounded-circle header-profile-user"
-								src="adminResource/images/avatar-1.jpg" alt="Header Avatar" />
+								src="<%=request.getContextPath()%>/adminResource/images/avatar-1.jpg" alt="Header Avatar" />
 							<span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
 							<i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
 						</button>

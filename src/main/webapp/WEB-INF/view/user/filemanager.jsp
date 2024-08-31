@@ -11,16 +11,16 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="adminResource/images/favicon.ico">
+    <link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResource/images/favicon.ico">
 
     <!-- Bootstrap Css -->
-    <link href="adminResource/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/adminResource/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="adminResource/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/adminResource/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="adminResource/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/adminResource/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- App js -->
-    <script src="adminResource/js/plugin.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/plugin.js"></script>
 
 </head>
 
@@ -985,19 +985,19 @@
     <div class="rightbar-overlay"></div>
 
     <!-- JAVASCRIPT -->
-    <script src="adminResource/js/jquery.min.js"></script>
-    <script src="adminResource/js/bootstrap.bundle.min.js"></script>
-    <script src="adminResource/js/metisMenu.min.js"></script>
-    <script src="adminResource/js/simplebar.min.js"></script>
-    <script src="adminResource/js/waves.min.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/bootstrap.bundle.min.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/metisMenu.min.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/simplebar.min.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/waves.min.js"></script>
 
     <!-- apexcharts -->
-    <script src="adminResource/js/apexcharts.min.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/apexcharts.min.js"></script>
 
     <!-- file-manager js -->
-    <script src="adminResource/js/file-manager.init.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/file-manager.init.js"></script>
 
-    <script src="adminResource/js/app.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
 
 </body>
 

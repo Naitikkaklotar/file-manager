@@ -18,3 +18,14 @@ $(document).ready(function() {
         }
     });
 });
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+    document.getElementById("myForm").reset();
+    $("#myForm").validate().resetForm();
+    $("#myForm .is-invalid").removeClass("is-invalid");
+    $("#myForm .is-valid").removeClass("is-valid");
+    $('#username').removeAttr("disabled");
+    $('#myModalLabel').html('Add User');
+    $('#alert-container').hide();
+}

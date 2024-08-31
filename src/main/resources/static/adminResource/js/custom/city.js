@@ -1,8 +1,3 @@
-function closeModal() {
-	document.getElementById("myModal").style.display = "none";
-	document.getElementById("myForm").reset(); // Reset the form fields
-}
-
 function handleClickOfEdit(id) {
 
 	var htp = new XMLHttpRequest();

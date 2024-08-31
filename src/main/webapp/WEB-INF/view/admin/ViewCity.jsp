@@ -82,28 +82,28 @@
 						<div class="col-12">
 							<div
 								class="page-title-box d-sm-flex align-items-center justify-content-between">
-								<h4 class="mb-sm-0 font-size-18">City</h4>
+								<!-- Grouping City Details and Breadcrumb together -->
+								<div class="d-flex align-items-center">
+									<!-- City Details Heading -->
+									<h4 class="mb-sm-0 font-size-18">City Details</h4>
 
+									<!-- Breadcrumb -->
+									<div class="page-title-left ms-3">
+										<ol class="breadcrumb m-0">
+											<li class="breadcrumb-item"><a href="index">Home</a></li>
+											<li class="breadcrumb-item active">City</li>
+										</ol>
+									</div>
+								</div>
+
+								<!-- Right Side Button -->
 								<div class="page-title-right">
 									<button type="button"
 										class="btn btn-primary waves-effect waves-light"
 										data-bs-toggle="modal" data-bs-target="#myModal"
 										onclick="closeModal()">Add</button>
 								</div>
-								<!-- sample modal content -->
-								<!-- /.modal -->
 							</div>
-
-							<div class="page-title-left">
-								<ol class="breadcrumb m-0">
-									<li class="breadcrumb-item"><a href="index">Home</a></li>
-									<li class="breadcrumb-item active">City</li>
-
-								</ol>
-
-							</div>
-							<!-- end preview-->
-
 
 						</div>
 					</div>
@@ -135,17 +135,20 @@
 												<td>${j.count}</td>
 												<td>${i.stateVO.stateName}</td>
 												<td>${i.cityName}</td>
-												<td>${i.description}</td>
-
+												<td class="truncate-with-tooltip custom-tooltip"
+													data-bs-toggle="tooltip" data-bs-placement="top"
+													title="${i.description}">${i.description}</td>
 												<td><a class="btn-outline-primary"
 													href="javascript:void(0)"
 													onclick="handleClickOfEdit('${i.id}')"> <i
-														class="fas fa-pencil-alt"></i></a>&nbsp;&nbsp; <a
-													class="delete-icon-color" href="deleteCity?id=${i.id}">
-														<i class="fas fa-trash-alt"></i>
+														class="fas fa-pencil-alt"></i>
+												</a>&nbsp;&nbsp; <a class="delete-icon-color"
+													href="deleteCity?id=${i.id}"> <i
+														class="fas fa-trash-alt"></i>
 												</a></td>
 											</tr>
 										</c:forEach>
+
 									</tbody>
 
 								</table>
@@ -198,23 +201,22 @@
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="myModalLabel">City Details</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<f:form id="myForm" action="saveCity" method="post"
-						modelAttribute="CityVO">
-
+				<f:form id="myForm" action="saveCity" method="post"
+					modelAttribute="CityVO">
+					<div class="modal-header">
+						<h5 class="modal-title" id="myModalLabel">Add City</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
 						<div class="mb-3">
 							<label for="stateName" class="form-label">State Name</label>
 							<f:select path="stateVO.id" class="form-control" id="stateName">
+								<option value="" disabled selected>Select a state</option>
 								<c:forEach items="${stateList}" var="i">
 									<option value="${i.id}">${i.stateName}</option>
 								</c:forEach>
 							</f:select>
-
 						</div>
 
 						<div class="mb-3">
@@ -225,29 +227,25 @@
 
 						<div class="mb-3">
 							<label for="description" class="form-label">Description</label>
-							<f:input type="text" class="form-control" id="description"
-								path="description" name="description" />
+							<textarea class="form-control" id="description"
+								name="description"></textarea>
 						</div>
-
-
-						<div class="modal-footer">
-
-							<f:hidden path="id" />
-
-							<button type="button" class="btn btn-secondary waves-effect"
-								data-bs-dismiss="modal" onclick="closeModal()">Close</button>
-							<button type="submit" id="saveBtn"
-								class="btn btn-primary waves-effect waves-light">Save</button>
-						</div>
-					</f:form>
-				</div>
-
-
+					</div>
+					<div class="modal-footer">
+						<f:hidden path="id" />
+						<button type="button"
+							class="btn btn-outline-secondary waves-effect"
+							data-bs-dismiss="modal" onclick="closeModal()">Cancel</button>
+						<button type="submit" id="saveBtn"
+							class="btn btn-primary waves-effect waves-light">Add</button>
+					</div>
+				</f:form>
 			</div>
 			<!-- /.modal-content -->
 		</div>
 		<!-- /.modal-dialog -->
 	</div>
+
 
 
 
@@ -301,9 +299,9 @@
 		src="<%=request.getContextPath()%>/adminResource/js/datatables.init.js"></script>
 
 	<script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
-	
-<!-- validdd-->	<script
 
+	<!-- validdd-->
+	<script
 		src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/jquery.validate.min.js"></script>

@@ -114,8 +114,8 @@ $(document).ready(function() {
 });
 
 
-
-function closeModal() {
+/*only for model reset */
+/*function closeModal() {
 	document.getElementById("myModal").style.display = "none";
 	document.getElementById("myForm").reset(); // Reset the form fields
 
@@ -123,7 +123,18 @@ function closeModal() {
 	
 	$('#username').removeAttr("disabled")
 	$('#myModalLabel').html('Add User');
+}*/
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+    document.getElementById("myForm").reset();
+    $("#myForm").validate().resetForm();
+    $("#myForm .is-invalid").removeClass("is-invalid");
+    $("#myForm .is-valid").removeClass("is-valid");
+    $('#username').removeAttr("disabled");
+    $('#myModalLabel').html('Add User');
+    $('#alert-container').hide();
 }
+
 
 
 function handleClickOfEdit(id) {
@@ -257,39 +268,27 @@ function getCityByState(){
 	htp.open("get", "getCityByState?id=" + state.value, true);
 	htp.send();
 }
+function changeStatus(id, status) {
 
-function changeStatus(id,status){
+    var htp = new XMLHttpRequest();
 
-	
-	var htp = new XMLHttpRequest();
+    htp.onreadystatechange = function () {
 
-	htp.onreadystatechange = function() {
-		
-		if (htp.readyState === 4) {
-			
-			if(htp.responseText){
-				
-				
-				const s = status === 'active' ? 'Blocked' : 'Active';
-				$(`#flexSwitchCheck${id}`).attr('title',s);
-				
-				
-				// TODO : Toasty	
-				showErrorToast('test');
-			}else{
-				// TODO : Toasty
-				showErrorToast('testy');
-			}
-			$(`#flexSwitchCheck${id}`).attr('data-bs-placement','right');
-			$(`#flexSwitchCheck${id}`).attr('data-bs-toggle','tooltip');
-		}
-	}
+        if (htp.readyState === 4) {
 
-	htp.open("get", "changeStatus?id=" + id, true);
-	htp.send();
-	
+            if (htp.responseText) {
+                const s = status === 'active' ? 'Blocked' : 'Active';
+                $(`#flexSwitchCheck${id}`).attr('title', s);
+
+                // Show success toast
+                showSuccessToast('Status changed successfully');
+            } else {
+                // Show error toast
+                showErrorToast('Failed to change status');
+            }
+        }
+    }
+
+    htp.open("get", "changeStatus?id=" + id, true);
+    htp.send();
 }
-
-
-
-

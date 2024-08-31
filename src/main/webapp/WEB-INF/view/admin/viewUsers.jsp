@@ -78,28 +78,28 @@
 				<div class="container-fluid">
 
 					<!-- start page title -->
-					<div class="row">
-						<div class="col-12">
-							<div
-								class="page-title-box d-sm-flex align-items-center justify-content-between">
-								<h4 class="mb-sm-0 font-size-18">Users</h4>
+					<div
+						class="page-title-box d-sm-flex align-items-center justify-content-between">
+						<!-- Grouping Users Heading and Breadcrumb together -->
+						<div class="d-flex align-items-center">
+							<!-- Users Heading -->
+							<h4 class="mb-sm-0 font-size-18">Users</h4>
+
+							<!-- Breadcrumb -->
+							<div class="ms-3">
 								<ol class="breadcrumb m-0">
 									<li class="breadcrumb-item"><a href="index">Home</a></li>
 									<li class="breadcrumb-item active">Users</li>
 								</ol>
-
-								<div class="page-title-right">
-									<button type="button"
-										class="btn btn-primary waves-effect waves-light"
-										data-bs-toggle="modal" data-bs-target="#myModal"
-										onclick="closeModal()">Add</button>
-								</div>
-								<!-- sample modal content -->
-								<!-- /.modal -->
 							</div>
-							<!-- end preview-->
+						</div>
 
-
+						<!-- Right Side Button -->
+						<div class="page-title-right">
+							<button type="button"
+								class="btn btn-primary waves-effect waves-light"
+								data-bs-toggle="modal" data-bs-target="#myModal"
+								onclick="closeModal()">Add</button>
 						</div>
 					</div>
 				</div>
@@ -212,14 +212,15 @@
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="myModalLabel">Add User</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<f:form id="myForm" action="saveUser" method="post"
-						modelAttribute="UserVO">
+				<f:form id="myForm" action="saveUser" method="post"
+					modelAttribute="UserVO">
+					<div class="modal-header">
+						<h5 class="modal-title" id="myModalLabel">Add User</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+
 						<div class="row">
 							<div class="mb-3 col-4">
 								<label for="name" class="form-label">First Name</label>
@@ -283,20 +284,18 @@
 							<f:textarea class="form-control" id="address" path="address"
 								name="address" rows="3"></f:textarea>
 						</div>
-						<div class="modal-footer">
+					</div>
+					<div class="modal-footer">
+						<f:hidden path="id" />
+						<f:hidden path="loginVO.id" name="loginId" id="loginId" />
+						<button type="button"
+							class="btn btn-outline-secondary waves-effect"
+							data-bs-dismiss="modal" onclick="closeModal()">Cancel</button>
+						<button type="submit" id="saveBtn"
+							class="btn btn-primary waves-effect waves-light">Add</button>
+					</div>
 
-							<f:hidden path="id" />
-
-							<f:hidden path="loginVO.id" name="loginId" id="loginId" />
-
-							<button type="button" class="btn btn-secondary waves-effect"
-								data-bs-dismiss="modal" onclick="closeModal()">Close</button>
-							<button type="submit" id="saveBtn"
-								class="btn btn-primary waves-effect waves-light">Save</button>
-						</div>
-					</f:form>
-
-				</div>
+				</f:form>
 			</div>
 		</div>
 	</div>
@@ -308,6 +307,7 @@
 		src="<%=request.getContextPath()%>/adminResource/js/jquery.toast.min.js"></script>
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/custom/toaster.js"></script>
+
 	<script
 		src="<%=request.getContextPath()%>/adminResource/js/custom/users.js"></script>
 	<script
