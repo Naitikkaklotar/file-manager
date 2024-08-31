@@ -10,16 +10,16 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="adminResource/images/favicon.ico" />
+    <link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResource/images/favicon.ico" />
 
     <!-- Bootstrap Css -->
-    <link href="adminResource/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/adminResource/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="adminResource/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/adminResource/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="adminResource/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/adminResource/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- App js -->
-    <script src="adminResource/js/plugin.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/plugin.js"></script>
 </head>
 
 <body data-sidebar="dark">
@@ -68,7 +68,7 @@
                                             <div class="avatar-md">
                                                 <span
                                                     class="avatar-title rounded-circle bg-light text-danger font-size-16">
-                                                    <img src="adminResource/images/img-1.png" alt="" height="30" />
+                                                    <img src="<%=request.getContextPath()%>/adminResource/images/img-1.png" alt="" height="30" />
                                                 </span>
                                             </div>
                                         </div>
@@ -83,13 +83,13 @@
                                             <div class="avatar-group">
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-4.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-4.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-5.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-5.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
@@ -105,7 +105,7 @@
                                                 </div>
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-2.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-2.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
@@ -137,7 +137,7 @@
                                             <div class="avatar-md">
                                                 <span
                                                     class="avatar-title rounded-circle bg-light text-danger font-size-16">
-                                                    <img src="adminResource/images/img-2.png" alt="" height="30" />
+                                                    <img src="<%=request.getContextPath()%>/adminResource/images/img-2.png" alt="" height="30" />
                                                 </span>
                                             </div>
                                         </div>
@@ -152,13 +152,13 @@
                                             <div class="avatar-group">
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-8.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-8.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-2.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-2.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
@@ -190,7 +190,7 @@
                                             <div class="avatar-md">
                                                 <span
                                                     class="avatar-title rounded-circle bg-light text-danger font-size-16">
-                                                    <img src="adminResource/images/img-3.png" alt="" height="30" />
+                                                    <img src="<%=request.getContextPath()%>/adminResource/images/img-3.png" alt="" height="30" />
                                                 </span>
                                             </div>
                                         </div>
@@ -215,7 +215,7 @@
                                                 </div>
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-2.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-2.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
@@ -247,7 +247,7 @@
                                             <div class="avatar-md">
                                                 <span
                                                     class="avatar-title rounded-circle bg-light text-danger font-size-16">
-                                                    <img src="adminResource/images/img-4.png" alt="" height="30" />
+                                                    <img src="<%=request.getContextPath()%>/adminResource/images/img-4.png" alt="" height="30" />
                                                 </span>
                                             </div>
                                         </div>
@@ -263,19 +263,19 @@
                                             <div class="avatar-group">
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-1.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-1.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-6.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-6.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-7.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-7.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
@@ -307,7 +307,7 @@
                                             <div class="avatar-md">
                                                 <span
                                                     class="avatar-title rounded-circle bg-light text-danger font-size-16">
-                                                    <img src="adminResource/images/img-5.png" alt="" height="30" />
+                                                    <img src="<%=request.getContextPath()%>/adminResource/images/img-5.png" alt="" height="30" />
                                                 </span>
                                             </div>
                                         </div>
@@ -322,13 +322,13 @@
                                             <div class="avatar-group">
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-1.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-1.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-3.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-3.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
@@ -370,7 +370,7 @@
                                             <div class="avatar-md">
                                                 <span
                                                     class="avatar-title rounded-circle bg-light text-danger font-size-16">
-                                                    <img src="adminResource/images/img-6.png" alt="" height="30" />
+                                                    <img src="<%=request.getContextPath()%>/adminResource/images/img-6.png" alt="" height="30" />
                                                 </span>
                                             </div>
                                         </div>
@@ -385,13 +385,13 @@
                                             <div class="avatar-group">
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-4.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-4.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-5.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-5.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
@@ -423,7 +423,7 @@
                                             <div class="avatar-md">
                                                 <span
                                                     class="avatar-title rounded-circle bg-light text-danger font-size-16">
-                                                    <img src="adminResource/images/img-3.png" alt="" height="30" />
+                                                    <img src="<%=request.getContextPath()%>/adminResource/images/img-3.png" alt="" height="30" />
                                                 </span>
                                             </div>
                                         </div>
@@ -439,7 +439,7 @@
                                             <div class="avatar-group">
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-5.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-5.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
@@ -481,7 +481,7 @@
                                             <div class="avatar-md">
                                                 <span
                                                     class="avatar-title rounded-circle bg-light text-danger font-size-16">
-                                                    <img src="adminResource/images/img-4.png" alt="" height="30" />
+                                                    <img src="<%=request.getContextPath()%>/adminResource/images/img-4.png" alt="" height="30" />
                                                 </span>
                                             </div>
                                         </div>
@@ -506,7 +506,7 @@
                                                 </div>
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-2.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-2.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
@@ -538,7 +538,7 @@
                                             <div class="avatar-md">
                                                 <span
                                                     class="avatar-title rounded-circle bg-light text-danger font-size-16">
-                                                    <img src="adminResource/images/img-2.png" alt="" height="30" />
+                                                    <img src="<%=request.getContextPath()%>/adminResource/images/img-2.png" alt="" height="30" />
                                                 </span>
                                             </div>
                                         </div>
@@ -551,13 +551,13 @@
                                             <div class="avatar-group">
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-4.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-4.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-5.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-5.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
@@ -573,7 +573,7 @@
                                                 </div>
                                                 <div class="avatar-group-item">
                                                     <a href="javascript: void(0);" class="d-inline-block">
-                                                        <img src="adminResource/images/avatar-2.jpg" alt=""
+                                                        <img src="<%=request.getContextPath()%>/adminResource/images/avatar-2.jpg" alt=""
                                                             class="rounded-circle avatar-xs" />
                                                     </a>
                                                 </div>
@@ -648,13 +648,13 @@
     <div class="rightbar-overlay"></div>
 
     <!-- JAVASCRIPT -->
-    <script src="adminResource/js/jquery.min.js"></script>
-    <script src="adminResource/js/bootstrap.bundle.min.js"></script>
-    <script src="adminResource/js/metisMenu.min.js"></script>
-    <script src="adminResource/js/simplebar.min.js"></script>
-    <script src="adminResource/js/waves.min.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/bootstrap.bundle.min.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/metisMenu.min.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/simplebar.min.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/waves.min.js"></script>
 
-    <script src="adminResource/js/app.js"></script>
+    <script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
 </body>
 
 </html>

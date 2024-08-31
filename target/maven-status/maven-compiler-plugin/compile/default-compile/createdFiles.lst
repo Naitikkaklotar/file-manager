@@ -22,6 +22,7 @@ com\project\model\StateVO.class
 com\project\controller\LoginController.class
 com\project\configuration\SecurityConfiguration.class
 com\project\DAO\LoginDAO.class
+com\project\utils\Basemethods$1.class
 com\project\service\LoginService.class
 com\project\HibernateConfig.class
 com\project\service\StateServiceImpl.class

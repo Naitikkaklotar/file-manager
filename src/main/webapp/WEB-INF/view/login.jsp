@@ -12,25 +12,25 @@
 	name="description" />
 <meta content="Themesbrand" name="author" />
 <!-- App favicon -->
-<link rel="shortcut icon" href="adminResource/images/favicon.ico">
+<link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResource/images/favicon.ico">
 
 <!-- owl.carousel css -->
-<link rel="stylesheet" href="adminResource/css/owl.carousel.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResource/css/owl.carousel.min.css">
 
 <link rel="stylesheet"
-	href="adminResource/css/owl.theme.default.min.css">
+	href="<%=request.getContextPath()%>/adminResource/css/owl.theme.default.min.css">
 
 <!-- Bootstrap Css -->
-<link href="adminResource/css/bootstrap.min.css" id="bootstrap-style"
+<link href="<%=request.getContextPath()%>/adminResource/css/bootstrap.min.css" id="bootstrap-style"
 	rel="stylesheet" type="text/css" />
 <!-- Icons Css -->
-<link href="adminResource/css/icons.min.css" rel="stylesheet"
+<link href="<%=request.getContextPath()%>/adminResource/css/icons.min.css" rel="stylesheet"
 	type="text/css" />
 <!-- App Css-->
-<link href="adminResource/css/app.min.css" id="app-style"
+<link href="<%=request.getContextPath()%>/adminResource/css/app.min.css" id="app-style"
 	rel="stylesheet" type="text/css" />
 <!-- App js -->
-<script src="adminResource/js/plugin.js"></script>
+<script src="<%=request.getContextPath()%>/adminResource/js/plugin.js"></script>
 
 </head>
 
@@ -110,9 +110,9 @@
 							<div class="d-flex flex-column h-100">
 								<div class="mb-4 mb-md-5">
 									<a href="index.html" class="d-block card-logo"> <img
-										src="adminResource/images/logo-dark.png" alt="" height="18"
+										src="<%=request.getContextPath()%>/adminResource/images/logo-dark.png" alt="" height="18"
 										class="card-logo-dark"> <img
-										src="adminResource/images/logo-light.png" alt="" height="18"
+										src="<%=request.getContextPath()%>/adminResource/images/logo-light.png" alt="" height="18"
 										class="card-logo-light">
 									</a>
 								</div>
@@ -182,25 +182,25 @@
 	</div>
 
 	<!-- JAVASCRIPT -->
-	<script src="adminResource/js/jquery.min.js"></script>
-	<script src="adminResource/js/bootstrap.bundle.min.js"></script>
-	<script src="adminResource/js/metisMenu.min.js"></script>
-	<script src="adminResource/js/simplebar.min.js"></script>
-	<script src="adminResource/js/waves.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResource/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResource/js/bootstrap.bundle.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResource/js/metisMenu.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResource/js/simplebar.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResource/js/waves.min.js"></script>
 
 	<!-- apexcharts -->
-	<script src="adminResource/js/apexcharts.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResource/js/apexcharts.min.js"></script>
 
 	<!-- owl.carousel js -->
-	<script src="adminResource/js/owl.carousel.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResource/js/owl.carousel.min.js"></script>
 
 	<!-- auth-2-carousel init -->
-	<script src="adminResource/js/auth-2-carousel.init.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResource/js/auth-2-carousel.init.js"></script>
 
 	<!-- file-manager js -->
-	<script src="adminResource/js/file-manager.init.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResource/js/file-manager.init.js"></script>
 
-	<script src="adminResource/js/app.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResource/js/app.js"></script>
 
 </body>
 
