@@ -1,5 +1,7 @@
 com\project\DAO\LoginDAOImpl.class
+com\project\model\DocumentVO.class
 com\project\DAO\UserDAO.class
+com\project\DAO\DocumentDAOImpl.class
 com\project\DAO\CityDAO.class
 com\project\model\UserVO.class
 com\project\DAO\StateDAOImpl.class
@@ -21,10 +23,14 @@ com\project\model\CityVO.class
 com\project\model\StateVO.class
 com\project\controller\LoginController.class
 com\project\configuration\SecurityConfiguration.class
+com\project\DAO\DocumentDAO.class
 com\project\DAO\LoginDAO.class
 com\project\utils\Basemethods$1.class
 com\project\service\LoginService.class
 com\project\HibernateConfig.class
+com\project\controller\DocumentController.class
+com\project\service\DocumentService.class
 com\project\service\StateServiceImpl.class
 com\project\service\UserService.class
+com\project\service\DocumentServiceImpl.class
 com\project\service\UserServiceImpl.class

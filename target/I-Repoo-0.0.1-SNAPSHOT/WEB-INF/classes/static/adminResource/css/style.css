@@ -1,0 +1,29 @@
+.delete-icon-color{
+	color : #cf5a5a !important
+}
+/* ............................................. */
+.truncate-with-tooltip {
+    max-width: 520px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Tooltip container */
+.tooltip {
+    background-color: #333; /* Background color of the tooltip */
+    border: 1px solid #555; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px; /* Padding inside the tooltip */
+    opacity: 1 !important; /* Ensures the tooltip is fully opaque */
+}
+
+/* Tooltip text */
+.tooltip-inner {
+    color: #fff; /* Text color */
+    font-size: 14px; /* Text size */
+    padding: 8px 12px; /* Padding inside the tooltip */
+    border-radius: 4px; /* Rounded corners */
+    max-width: 300px; /* Max width of the tooltip */
+    text-align: left; /* position of  the text */
+}
